@@ -67,20 +67,20 @@ console.log(document.getElementsByClassName('kartal kusu'));
  * Bunu yaparken class için ön ek olarak nokta ".", id'ler için kare "#" kullanmanız gerekir. Sayfada eşleşen ilk elemanı size döndürecektir. 
  * Belirtilen elemanın eşleşememesi durumunda geriye null dönecektir.
  */
- const email = document.querySelector('#signup input[name="email"]');
- console.log(email) //<input type="text" name="email"> //input collection
+const email = document.querySelector('#signup input[name="email"]');
+console.log(email) //<input type="text" name="email"> //input collection
 
- //8--querySelectorAll()
- //querySelectorAll() metodu, QuerySelector () metodu ile aynı mantık ile çalışır 
- //tek farkı eşleşen ilk elamanı döndürmek yerine eşleşen tüm elemanları bir NodeList objesi olarak döndürmesidir.
- const elems = document.querySelectorAll('.bird, .animal');
- console.log(elems.length); // 4
+//8--querySelectorAll()
+//querySelectorAll() metodu, QuerySelector () metodu ile aynı mantık ile çalışır 
+//tek farkı eşleşen ilk elamanı döndürmek yerine eşleşen tüm elemanları bir NodeList objesi olarak döndürmesidir.
+const elems = document.querySelectorAll('.bird, .animal');
+console.log(elems.length); // 4
 
- //Examples:
- //signup id'li elemanın içindeki tüm input elemanlarını seçmek istersek;
- const inputs = document.getElementById('signup').getElementsByTagName('input');
- //OR
- const inputs2 = document.querySelector('#signup').querySelectorAll('input');
- console.log(inputs)  //HtmlCollection
- console.log(inputs2) //NodeList
+//Examples:
+//signup id'li elemanın içindeki tüm input elemanlarını seçmek istersek;
+const inputs = document.getElementById('signup').getElementsByTagName('input');
+//OR
+const inputs2 = document.querySelector('#signup').querySelectorAll('input');
+console.log(inputs)  //HtmlCollection
+console.log(inputs2) //NodeList
 
