@@ -3,13 +3,16 @@
 let isName = prompt("Lütfen isminizi giriniz : ")
 let myName = document.querySelector("#myName").innerHTML = isName
 
-function showTime(){
-    var date = new Date();
-    document.querySelector('#myClock').innerHTML = `${date}`;
-}
+// 1.YOL
+//function showTime(){
+//    var date = new Date();
+//    document.querySelector('#myClock').innerHTML = `${date}`;
+//}
 
 //setInterval(function(){showTime()});
 //setInterval(function(){showTime();},1000);
+
+// 2.YOL
 
 function showTime(){
     var date = new Date();
