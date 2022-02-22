@@ -123,7 +123,7 @@ function getMessage(name, surname) {
     alert(`Merhaba ${name} ${surname}`);
 }
 
-//!!!ÇALIŞIYOR
+//!!!Fazla parametreyi gormezden gelir. Hata vermez
 getMessage("Virginia", "Woolf", "Mrs."); //Merhaba Virginia Woolf 
 getMessage("Franz")  //Merhaba Franz undefined
 getMessage()         //Merhaba undefined undefined
