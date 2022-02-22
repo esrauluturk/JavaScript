@@ -153,3 +153,9 @@ function Question(hobby) {
 
 var softwareQuestion = Question("software");
 softwareQuestion("Cemre", "nodejs");
+
+
+//Hackerrank - Factorial
+function factorial(n) {
+    return (n == 1) ? n : n * factorial(n - 1);
+}
