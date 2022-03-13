@@ -105,10 +105,38 @@ import fetch from "node-fetch";
 //     console.log("Selam!");
 // })();
 
+// (async () => {
+//     const users = await (await fetch("https://jsonplaceholder.typicode.com/users")).json();
+//     const post1 = await (await fetch("https://jsonplaceholder.typicode.com/posts/1")).json();
+//     const post2 = await (await fetch("https://jsonplaceholder.typicode.com/posts/2")).json();
+//     console.log("users", users);
+//     console.log("post 1", post1);
+//     console.log("post 2", post2);
+
+// })();
+
+// 6
+// node-fetch kutuphanesi yerine axios kullanilabilir.
+// Kurulum : npm i axios
+//.json() ifadesine gerek kalmaz. Boylelikle ikinci await yapisina da gerek kalmaz.
+import axios from "axios";
 (async () => {
-    const users = await (await fetch("https://jsonplaceholder.typicode.com/users")).json();
-    const post1 = await (await fetch("https://jsonplaceholder.typicode.com/posts/1")).json();
-    const post2 = await (await fetch("https://jsonplaceholder.typicode.com/posts/2")).json();
+    // 1. Istenen sonucu donmez.
+    // const users = await axios("https://jsonplaceholder.typicode.com/users");
+    // console.log("users", users);
+    // 2. Istenen sonucu doner. data olarak fix bir isim altinda doner.
+    // const { data } = await axios("https://jsonplaceholder.typicode.com/users");
+    // console.log("users", data);
+    // Hepsinde surekli {data} diyemeyecegimiz icin "data"yi yeniden isimlendirebiliriz.
+    
+    // ==============YENIDEN ISIMLENDIRME=========================
+    const { data: users } = await axios("https://jsonplaceholder.typicode.com/users");
+    const { data: post1 } = await axios("https://jsonplaceholder.typicode.com/posts/1");
+    const { data: post2 } = await axios("https://jsonplaceholder.typicode.com/posts/2");
+    // ============================================================
+    // const post1 = await axios("https://jsonplaceholder.typicode.com/posts/1");
+    // const post2 = await axios("https://jsonplaceholder.typicode.com/posts/2");  
+    //==============================================================
     console.log("users", users);
     console.log("post 1", post1);
     console.log("post 2", post2);
